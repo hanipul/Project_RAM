@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TA Regional</title>
+    <title>Monitoring Rekon</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -33,6 +33,10 @@
         }
         .table-container {
             margin-top: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+        .table {
+            min-width: 1200px; /* Set a minimum width for the table */
         }
         .table thead th {
             background-color: #4a4f63;
@@ -90,16 +94,16 @@
                     <h5 class="mt-2">ALDI</h5>
                     <p>TELKOM - XXXXXX</p>
                 </div>
-                <a href="homepageTA.html" class="btn btn-primary btn-block" style="background-color: #fcd980; color: #3b3f51">Home</a>
+                <a href="home.html" class="btn btn-primary btn-block" style="background-color: #fcd980; color: #3b3f51">Home</a>
                 <div class="text-center mb-4">
                     <h5 class="mt-2 dashboard" style="color: white">DASHBOARD</h5>
                 </div>
-                <a href="rekon.html" class="btn btn-block" style="background-color: #007bff; color: white">Monitoring Rekon</a>
+                <a href="rekon.html" class="btn btn-block" style="background-color: #007bff; color: white;">Monitoring Rekon</a>
                 <a href="keseluruhan.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">Monitoring Keseluruhan</a>
             </nav>
             <main class="col-md-10 ml-sm-auto col-lg-10 px-md-4 position-relative">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">TA REGIONAL</h1>
+                    <h1 class="h2">Monitoring Rekon</h1>
                     <button class="logout-button">Log Out</button>
                 </div>
                 <div class="btn-toolbar mb-2 mb-md-0">
@@ -121,42 +125,27 @@
                     <table class="table table-dark table-bordered">
                         <thead>
                             <tr>
-                                <th rowspan="2">Witel</th>
-                                <th rowspan="2">Target ODC</th>
-                                <th colspan="2">No SC</th>
-                                <th colspan="3">Validasi ODC Va</th>
-                                <th colspan="2">Review RAM</th>
-                                <th colspan="2">DDP/VALINS</th>
-                            </tr>
-                            <tr>
-                                <th>Sudah Entry</th>
-                                <th>Belum Entry</th>
-                                <th>OK</th>
-                                <th>NOK</th>
-                                <th>%</th>
-                                <th>OK</th>
-                                <th>NOK</th>
-                                <th>Belum Entry</th>
-                                <th>Perbaikan</th>
+                                <th>ID Valins</th>
+                                <th>Mitra</th>
+                                <th>PIC Daman</th>
+                                <th>Tgl Check</th>
+                                <th>Hasil Check 1</th>
+                                <th>Ket</th>
+                                <th>ID Valins Perbaikan 1</th>
+                                <th>Hasil Perbaikan 1</th>
+                                <th>Ket</th>
+                                <th>ID Valins Perbaikan 2</th>
+                                <th>Hasil Perbaikan 2</th>
+                                <th>Ket</th>
+                                <th>Review RAM</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>BANDUNG</td>
-                                <td>234562</td>
+                                <td>123</td>
+                                <td>Tanggal</td>
                                 <td>??</td>
                                 <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                            </tr>
-                            <tr>
-                                <td>BANDUNG BARAT</td>
-                                <td>2346236</td>
                                 <td>??</td>
                                 <td>??</td>
                                 <td>??</td>
@@ -168,21 +157,10 @@
                                 <td>??</td>
                             </tr>
                             <tr>
-                                <td>KARAWANG</td>
-                                <td>2346236</td>
+                                <td>456</td>
+                                <td>Tanggal</td>
                                 <td>??</td>
                                 <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                                <td>??</td>
-                            </tr>
-                            <tr>
-                                <td>SUKABUMI</td>
-                                <td>2346236</td>
                                 <td>??</td>
                                 <td>??</td>
                                 <td>??</td>
@@ -194,8 +172,10 @@
                                 <td>??</td>
                             </tr>
                             <tr>
-                                <td>CIREBON</td>
-                                <td>2346236</td>
+                                <td>789</td>
+                                <td>Tanggal</td>
+                                <td>??</td>
+                                <td>??</td>
                                 <td>??</td>
                                 <td>??</td>
                                 <td>??</td>
@@ -207,8 +187,55 @@
                                 <td>??</td>
                             </tr>
                             <tr>
-                                <td>TASIKMALAYA</td>
-                                <td>2346236</td>
+                                <td>123</td>
+                                <td>Tanggal</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                            </tr>
+                            <tr>
+                                <td>456</td>
+                                <td>Tanggal</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                            </tr>
+                            <tr>
+                                <td>789</td>
+                                <td>Tanggal</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>??</td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>Tanggal</td>
+                                <td>??</td>
+                                <td>??</td>
                                 <td>??</td>
                                 <td>??</td>
                                 <td>??</td>

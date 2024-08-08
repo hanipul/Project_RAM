@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TA REGIONAL</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #2c2f3e;
             color: white;
+            font-family: 'Poppins', sans-serif;
         }
         .sidebar {
             height: 100vh;
             background-color: #3b3f51;
             padding-top: 20px;
+            overflow-y: auto;
         }
         .sidebar a {
-            color: white;
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            margin-bottom: 10px;
-            font-weight: bold;
-            border-radius: 8px;
+        color: #3b3f51;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-weight: bold;
+        border-radius: 8px;
+        background-color: #fcd980;
+        transition: background-color 0.3s, color 0.3s;
         }
         .sidebar a:hover {
-            background-color: #575c7a;
+            background-color: #007bff;
+            color: white;
         }
         .sidebar .dashboard {
             color: #fcd980;
@@ -62,6 +68,7 @@
             border: none;
             border-radius: 8px;
             padding: 10px 20px;
+            transition: color 0.3s, background-color 0.3s
         }
         .logout-button:hover {
             background-color: red;
@@ -69,15 +76,50 @@
         }
         .upload-button {
             margin-left: 10px;
+            margin-top: 7px;
             color: white;
             background-color: #575c7a;
             border: none;
             border-radius: 8px;
             padding: 10px 20px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s
         }
         .upload-button:hover {
-            background-color: #fcd980;
+            background-color: #007bff;
             color: #3b3f51;
+        }
+        .user-img{
+            width: 125px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 10% 15%;
+        }
+        #photo{
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        #file{
+            display: none;
+        }
+        #upload-button {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        padding: 6px 6px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #3b3f51;
+        transform: translateX(320%);
+        margin-top: -32px;
+        background-color: #fcd980;
+        box-shadow: 2px 4px 4px rgba(0,0,0,0.644);
+        transition: color 0.3s, background-color 0.3s;
+        }
+        #upload-button:hover {
+        background-color: #007bff;
+        color: white;
         }
     </style>
 </head>
@@ -85,22 +127,26 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-2 sidebar">
+                <div class="user-img">
+                    <img src="user.png" id="photo">
+                    <input type="file" id="file">
+                    <label for="file" id="upload-button"><i class="fa fa-camera fa-xl" aria-hidden="true"></i></label>
+                </div>
                 <div class="text-center mb-4">
-                    <img src="profile-pic-placeholder.png" class="rounded-circle" alt="Profile Picture" width="100">
                     <h5 class="mt-2">ALDI</h5>
                     <p>TELKOM - XXXXXX</p>
                 </div>
-                <a href="home.html" class="btn btn-primary btn-block"  style="background-color: #fcd980; color: #3b3f51;">Home</a>
+                <a href="home.html" class="btn btn-block">Home</a>
                 <div class="text-center mb-4">
                     <h5 class="mt-2 dashboard" style="color: white">DASHBOARD</h5>
                 </div>
-                <a href="rekon.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">Monitoring Rekon</a>
-                <a href="keseluruhan.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">Monitoring Keseluruhan</a>
-                <a href="homepageASO.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">ASO</a>
-                <a href="homepageDAMAN.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">DAMAN</a>
-                <a href="homepageTA.html" class="btn btn-block" style="background-color: #007bff; color: white;">TA REGIONAL</a>
-                <a href="homepageRAM.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">RAM</a>
-                <a href="homepageINPUTER.html" class="btn btn-block" style="background-color: #fcd980; color: #3b3f51;">INPUTER TA</a>
+                <a href="rekon.html" class="btn btn-block">Monitoring Rekon</a>
+                <a href="keseluruhan.html" class="btn btn-block">Monitoring Keseluruhan</a>
+                <a href="homepageASO.html" class="btn btn-block">ASO</a>
+                <a href="homepageDAMAN.html" class="btn btn-block">DAMAN</a>
+                <a href="homepageTA.html" class="btn btn-block" style="background-color: #007bff; color: white">TA REGIONAL</a>
+                <a href="homepageRAM.html" class="btn btn-block">RAM</a>
+                <a href="homepageINPUTER.html" class="btn btn-block">INPUTER TA</a>
             </nav>
             <main class="col-md-10 ml-sm-auto col-lg-10 px-md-4 position-relative">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -119,7 +165,10 @@
                             <option>CIREBON</option>
                             <option>KARAWANG</option>
                         </select>
-                        <input type="file" class="upload-button">
+                        <label for="file-upload" class="upload-button">
+                            <i class="fas fa-upload"></i> Upload File
+                        </label>
+                        <input type="file" id="file-upload" style="display: none;">
                     </div>
                 </div>
                 <div class="table-container">
@@ -234,5 +283,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

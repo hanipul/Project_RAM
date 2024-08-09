@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background-image: url(bgLogin.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.login, .signup {
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(55px);
+    padding: 60px;
+    border-radius: 50px;
+    background-color: shadow(0, 0, 0, 0.);
+    
+}
+
+label {
+    color: #af2727;
+    font-size: 2.3em;
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+.login input[type="email"], .login input[type="password"], .login select, .login input[type="text"],
+.signup input[type="text"], .signup input[type="email"], .signup input[type="text"], .signup select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px ;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #e0dede;
+    font-size: 1rem;
+    text-transform: uppercase ;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.row input[type="text"], .row select {
+    width: calc(50% - 10px);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    display: block;
+    color: #fff;
+    background: #af2727;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+button:hover {
+    background: #af2727;
+    
+}
+
+p {
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+p a {
+    color: #020202;
+    text-decoration: none;
+}
+

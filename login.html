@@ -14,26 +14,46 @@
         </div>
         <div class="main">
             <div class="login">
-                <form>
+                <form onsubmit="return loginRedirect()">
                     <label for="chk" aria-hidden="true">Login</label>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="pswd" placeholder="Password" required>
-                    <select name="unit" required>
-                        <option value="" disabled selected>Select Unit</option>
-                        <option value="unit1">ASO</option>
-                        <option value="unit2">INPUTER TA</option>
-                        <option value="unit3">DAMAN</option>
-                        <option value="unit4">RAM</option>
-                        <option value="unit5">TA Regional</option>
+                    <select id="unit" name="unit" required>
+                        <option value="" disabled selected>Pilih Unit</option>
+                        <option value="aso">ASO</option>
+                        <option value="inputer_ta">INPUTER TA</option>
+                        <option value="daman">DAMAN</option>
+                        <option value="ram">RAM</option>
+                        <option value="ta_regional">TA Regional</option>
                     </select>
-                    <input type="text" name="captcha" placeholder="Enter Captcha" required>
+                    <input type="text" name="captcha" placeholder="Masukkan Captcha" required>
                     <img src="path-to-captcha-image" alt="Captcha">
-                    <button> <a href="home.html"> Login </a> </button>
-                    <p>Don't have an account? <a href="signup.html">Create account</a></p>
+                    <button type="submit">Login</button>
+                    <p>Belum punya akun? <a href="signup.html">Buat akun</a></p>
                 </form>
             </div>
         </div>
     </div>
-    
+
+    <script>
+        function loginRedirect() {
+            const unit = document.getElementById('unit').value;
+            if (unit === 'aso') {
+                window.location.href = 'homepageASO.html';
+            } else if (unit === 'inputer_ta') {
+                window.location.href = 'homepageINPUTER.html';
+            } else if (unit === 'daman') {
+                window.location.href = 'homepageDAMAN.html';
+            } else if (unit === 'ram') {
+                window.location.href = 'homepageRAM.html';
+            } else if (unit === 'ta_regional') {
+                window.location.href = 'homepageTA.html';
+            } else {
+                alert('Silakan pilih unit yang valid.');
+                return false;
+            }
+            return false; 
+        }
+    </script>
 </body>
 </html>

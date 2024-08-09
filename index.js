@@ -14,3 +14,9 @@ if(chosedfile){
 reader.readAsDataURL(chosedfile);
     }
 })
+
+$(function() {
+    $("#date-picker").multiDatesPicker({
+        dateFormat: "yy-mm-dd"
+    });
+});

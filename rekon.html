@@ -150,7 +150,7 @@
                     <h5 class="mt-2">ALDI</h5>
                     <p>TELKOM - XXXXXX</p>
                 </div>
-                <a href="home.html"class="btn btn-block">Home</a>
+                <a href="homepageASO.html" target="_blank">Home</a>
                 <div class="text-center mb-4">
                     <h5 class="mt-2 dashboard" style="color: white">DASHBOARD</h5>
                 </div>
@@ -319,5 +319,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://dubrox.github.io/Multiple-Dates-Picker-for-jQuery-UI/jquery-ui.multidatespicker.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const homePage = urlParams.get('home');
+
+        document.querySelector('a[href="homepageASO.html"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = homePage + '.html';
+        });
+    </script>
 </body>
 </html>

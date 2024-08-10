@@ -9,33 +9,43 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
         body {
-            background-color: #2c2f3e;
-            color: white;
+            background-image: url('bgLogin.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgba(44, 47, 62, 0.05);
             font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+        .main-content {
+            background-color: rgba(44, 47, 62, 0.4);
+            padding: 20px;
+            border-radius: 8px;
         }
         .sidebar {
             height: 100vh;
-            background-color: #3b3f51;
+            background-color: rgba(59, 63, 81, 0.9);;
             padding-top: 20px;
             overflow-y: auto;
         }
         .sidebar a {
-        color: #3b3f51;
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        margin-bottom: 10px;
-        font-weight: bold;
-        border-radius: 8px;
-        background-color: #fcd980;
-        transition: background-color 0.3s, color 0.3s;
-        }
+            color: rgba(255, 255, 255, 0.705);
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: #af272773;
+            transition: background-color 0.3s, color 0.3s;
+            }
         .sidebar a:hover {
-            background-color: #007bff;
+            background-color: #af2727;
             color: white;
         }
         .sidebar .dashboard {
-            color: #fcd980;
+            color: #af2727;
             font-weight: bold;
         }
         .table-container {
@@ -65,9 +75,9 @@
             top: 20px;
             right: 25px;
             color: white;
-            background-color: #575c7a;
+            background-color: #af272773;
             border: none;
-            border-radius: 8px;
+            border-radius: 100px;
             padding: 10px 20px;
             transition: color 0.3s, background-color 0.3s
         }
@@ -79,7 +89,7 @@
             margin-left: 10px;
             margin-top: 7px;
             color: white;
-            background-color: #575c7a;
+            background-color: #af272773;
             border: none;
             border-radius: 8px;
             padding: 10px 20px;
@@ -87,8 +97,8 @@
             transition: color 0.3s, background-color 0.3s
         }
         .upload-button:hover {
-            background-color: #007bff;
-            color: #3b3f51;
+            background-color: #af2727;
+            color: white    ;
         }
         .user-img{
             width: 125px;
@@ -105,32 +115,32 @@
             display: none;
         }
         #upload-button {
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        padding: 6px 6px;
-        border-radius: 50%;
-        cursor: pointer;
-        color: #3b3f51;
-        transform: translateX(320%);
-        margin-top: -32px;
-        background-color: #fcd980;
-        box-shadow: 2px 4px 4px rgba(0,0,0,0.644);
-        transition: color 0.3s, background-color 0.3s;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            padding: 6px 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #3b3f51;
+            transform: translateX(320%);
+            margin-top: -32px;
+            background-color: white;
+            box-shadow: 2px 4px 4px rgba(0,0,0,0.644);
+            transition: color 0.3s, background-color 0.3s;
         }
         #upload-button:hover {
-        background-color: #007bff;
+        background-color: #af2727;
         color: white;
         }
         .ui-state-highlight, .ui-widget-content .ui-state-highlight {
-        background-color: #007bff !important; /* Warna biru */
-        border-color: #007bff !important;
-        color: white !important;
+            background-color: #007bff !important;
+            border-color: #007bff !important;
+            color: white !important;
         }
         .ui-state-highlight:hover, 
         .ui-state-highlight:focus {
-        outline: none !important;
-        box-shadow: none !important;
+            outline: none !important;
+            box-shadow: none !important;
         }
     </style>
 </head>
@@ -147,24 +157,23 @@
                     <h5 class="mt-2">ALDI</h5>
                     <p>TELKOM - XXXXXX</p>
                 </div>
-                <a href="homepageINPUTER.html" style="background-color: #007bff; color: white;" class="btn btn-block">Home</a>
+                <a href="homepageINPUTER.html" style="background-color: #af2727; color: white;" class="btn btn-block">Home</a>
                 <div class="text-center mb-4">
                     <h5 class="mt-2 dashboard" style="color: white">DASHBOARD</h5>
                 </div>
-                <a href="rekon.html?home=homepageASO" class=" btn btn-block">Monitoring Rekon</a>
-                <a href="keseluruhan.html?home=homepageASO" class=" btn btn-block">Monitoring Keseluruhan</a>
+                <a href="rekon.html?home=homepageINPUTER" class=" btn btn-block">Monitoring Rekon</a>
+                <a href="keseluruhan.html?home=homepageINPUTER" class=" btn btn-block">Monitoring Keseluruhan</a>
                 <div class="text-center" style="margin-top: 110px;">
                     <img src="logo.png" alt="Folk Image" class="img-fluid">
                 </div>
             </nav>     
-            <main class="col-md-10 ml-sm-auto col-lg-10 px-md-4 position-relative">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <main class="col-md-10 ml-sm-auto col-lg-10 px-md-4 position-relative main-content">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 mb-4 border-bottom">
                     <h1 class="h2">INPUTER TA</h1>
                     <a href="login.html" class="logout-button">Log Out</a>
                 </div>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="input-group">
-                        <label for="start" class="bold-label mr-2">FILTER :</label>
                         <input type="text" id="date-picker" class="form-control mr-2" placeholder="Pilih Tanggal">
                         <select class="form-control ml-2">
                             <option>--Pilih Posisi--</option>
@@ -282,7 +291,6 @@
                                 <td>??</td>
                                 <td>??</td>
                             </tr>
-                            <!-- Add more rows as needed -->
                         </tbody>
                     </table>
                 </div>

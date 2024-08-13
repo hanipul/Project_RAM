@@ -1,11 +1,12 @@
 (function () {
-    var DELIMITER = /[,;]/;
+    var DELIMITER = /[;]/;  // Update delimiter to semicolon
     var NEWLINE = '\n';
     var qRegex = /^"|"$/g;
     var i = document.getElementById('file-upload');
     var table = document.getElementById('table');
+    var positionSelect = document.querySelector('select');  // Get the position select element
 
-    if (!i) {
+    if (!i || !positionSelect) {
         return;
     }
 
@@ -13,6 +14,10 @@
         if (!!i.files && i.files.length > 0) {
             parseCSV(i.files[0]);
         }
+    });
+
+    positionSelect.addEventListener('change', function () {
+        filterTable(this.value);
     });
 
     function parseCSV(file) {
@@ -83,6 +88,21 @@
             });
 
             table.appendChild(rtr);
+        });
+    }
+
+    function filterTable(selectedPosition) {
+        var rows = table.querySelectorAll('tr:not(:first-child)');
+        
+        rows.forEach(function (row) {
+            var cells = row.querySelectorAll('td');
+            var positionCell = cells[0].textContent.trim();  // Assuming the position is in the first column
+
+            if (selectedPosition === '--Pilih Posisi--' || positionCell === selectedPosition) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
         });
     }
 })();

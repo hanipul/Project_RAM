@@ -17,8 +17,7 @@ body {
 .sidebar { 
     position: fixed;
     height: 100vh;
-    background-color: rgba(59, 63, 81, 0.9);;
-    background-color: rgba(215, 216, 220, 0.9);;
+    background-color: rgba(59, 63, 81, 0.9);
     padding-top: 20px;
     overflow: hidden;
     backdrop-filter: blur(50px);
@@ -31,15 +30,7 @@ body {
     width: 250px;
     z-index: 999;
     overflow-y: auto;} 
-.sidebar {
-    position: fixed; /* Sidebar akan tetap berada di tempat saat halaman di-scroll */
-    top: 0; /* Memastikan sidebar tetap berada di bagian atas halaman */
-    left: 0; /* Sidebar berada di sisi kiri halaman */
-    height: 100vh; /* Sidebar memiliki tinggi penuh layar */
-    background-color: rgba(59, 63, 81, 0.9); /* Warna background dengan transparansi */
-    padding-top: 20px;
-    overflow: hidden;
-}      
+
 .user-img img {
     width: 100px;
     height: 100px;

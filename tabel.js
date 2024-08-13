@@ -1,10 +1,9 @@
 (function () {
-    var DELIMITER = /[;]/;  // Update delimiter to semicolon
-    var NEWLINE = '\n';
+    var DELIMITER = /[;]/; 
     var qRegex = /^"|"$/g;
     var i = document.getElementById('file-upload');
     var table = document.getElementById('table');
-    var positionSelect = document.querySelector('select');  // Get the position select element
+    var positionSelect = document.querySelector('select');  
 
     if (!i || !positionSelect) {
         return;
@@ -96,8 +95,7 @@
         
         rows.forEach(function (row) {
             var cells = row.querySelectorAll('td');
-            var positionCell = cells[0].textContent.trim();  // Assuming the position is in the first column
-
+            var positionCell = cells[0].textContent.trim();  
             if (selectedPosition === '--Pilih Posisi--' || positionCell === selectedPosition) {
                 row.style.display = '';
             } else {

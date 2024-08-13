@@ -87,7 +87,7 @@ body {
         .table-container {
             margin-top: 20px;
             /* width: 100%; */
-            height: 1000px;
+            /* height: 1000px; */
             overflow: auto;
         }
         .table thead th {

@@ -39,9 +39,7 @@ body {
     background-color: rgba(59, 63, 81, 0.9); /* Warna background dengan transparansi */
     padding-top: 20px;
     overflow: hidden;
-}
-        
-        
+}      
 .user-img img {
     width: 100px;
     height: 100px;
@@ -131,49 +129,50 @@ body {
     cursor: pointer;
     transition: color 0.3s, background-color 0.3s
 }
-    .upload-button:hover {
-        background-color: #af2727;
-        color: white    ;
-    }
-    .user-img{
-        width: 125px;
-        height: 130px;
-        border-radius: 50%;
-        margin: 10% 23%;
-        }
-        #photo{
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        }
-        #file{
-        display: none;
-        }
-        #upload-button {
-            position: absolute;
-            height: 30px;
-            width: 30px;
-            padding: 6px 6px;
-            border-radius: 50%;
-            cursor: pointer;
-            color: #3b3f51;
-            transform: translateX(320%);
-            margin-top: -32px;
-            background-color: white;
-            box-shadow: 2px 4px 4px rgba(0,0,0,0.644);
-            transition: color 0.3s, background-color 0.3s;
-        }
-        #upload-button:hover {
-            background-color: #af2727;
-            color: white;
-        }
-        .ui-state-highlight, .ui-widget-content .ui-state-highlight {
-            background-color: #007bff !important;
-            border-color: #007bff !important;
-            color: white !important;
-        }
-        .ui-state-highlight:hover, 
-        .ui-state-highlight:focus {
-            outline: none !important;
-            box-shadow: none !important;
-        }
+.upload-button:hover {
+    background-color: #af2727;
+    color: white;
+}
+.user-img {
+    width: 125px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 10% 23%;
+}
+#photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+#file {
+    display: none;
+}
+#upload-button {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #3b3f51;
+    transform: translateX(320%);
+    margin-top: -32px;
+    background-color: white;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.644);
+    transition: color 0.3s, background-color 0.3s;
+}
+#upload-button:hover {
+    background-color: #af2727;
+    color: white;
+}
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    color: white !important;
+}
+.ui-state-highlight:hover, 
+.ui-state-highlight:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

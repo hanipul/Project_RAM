@@ -1,157 +1,153 @@
 body {
-            background-image: url('bgLogin.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: rgba(44, 47, 62, 0.05);
-            font-family: 'Poppins', sans-serif;
-            color: white;
-        }
-        .main-content {
-            background-color: rgba(44, 47, 62, 0.4);
-            height: 100vh;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        /* .sidebar {
-            height: 100vh;
-            background-color: rgba(59, 63, 81, 0.9);;
-            background-color: rgba(215, 216, 220, 0.9);;
-            padding-top: 20px;
-            overflow: hidden;
-            backdrop-filter: blur(50px);
-            border-radius: 8px;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-            z-index: 999;
-        } */
-
-        .sidebar {
-            position: fixed; /* Sidebar akan tetap berada di tempat saat halaman di-scroll */
-            top: 0; /* Memastikan sidebar tetap berada di bagian atas halaman */
-            left: 0; /* Sidebar berada di sisi kiri halaman */
-            height: 100vh; /* Sidebar memiliki tinggi penuh layar */
-            background-color: rgba(59, 63, 81, 0.9); /* Warna background dengan transparansi */
-            padding-top: 20px;
-            overflow: hidden;
-        }
+    background-image: url('bgLogin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(44, 47, 62, 0.05);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.main-content {
+    background-color: rgba(44, 47, 62, 0.4);
+    height: 100vh;
+    padding: 20px;
+    border-radius: 8px;
+}
+.sidebar { 
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(59, 63, 81, 0.9);;
+    background-color: rgba(215, 216, 220, 0.9);;
+    padding-top: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(50px);
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    z-index: 999;
+    overflow-y: auto;} 
+.sidebar {
+    position: fixed; /* Sidebar akan tetap berada di tempat saat halaman di-scroll */
+    top: 0; /* Memastikan sidebar tetap berada di bagian atas halaman */
+    left: 0; /* Sidebar berada di sisi kiri halaman */
+    height: 100vh; /* Sidebar memiliki tinggi penuh layar */
+    background-color: rgba(59, 63, 81, 0.9); /* Warna background dengan transparansi */
+    padding-top: 20px;
+    overflow: hidden;
+}
         
         
-        .user-img img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        
-        .btn-block {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            color: white;
-            text-align: center;
-        }
-        
-        .dashboard {
-            color: white;
-        }
-        
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .sidebar a {
-            color: rgba(255, 255, 255, 0.705);
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            margin-bottom: 10px;
-            font-weight: bold;
-            border-radius: 8px;
-            background-color: #af272773;
-            transition: background-color 0.3s, color 0.3s;
-            }
-        .sidebar a:hover {
-            background-color: #af2727;
-            color: white;
-        }
-        .sidebar .dashboard {
-            color: #af2727;
-            font-weight: bold;
-        }
-        .table-container {
-            margin-top: 20px;
-            /* width: 100%; */
-            /* height: 1000px; */
-            overflow: auto;
-        }
-        .table thead th {
-            background-color: #4a4f63;
-            border-color: #fff;
-            text-align: center;
-            border-width: 1px;
-            border-style: solid;
-        }
-        .table tbody td {
-            background-color: #3b3f51;
-            border-color: #4a4f63;
-            text-align: center;
-        }
-        .bold-label {
-            font-weight: bold;
-        }
-        .input-group {
-            display: flex;
-            align-items: center;
-        }
-        .logout-button {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            color: white;
-            background-color: #af272773;
-            border: none;
-            border-radius: 100px;
-            padding: 10px 20px;
-            transition: color 0.3s, background-color 0.3s
-        }
-        .logout-button:hover {
-            background-color: red;
-            color: white;
-        }
-        .upload-button {
-            margin-left: 10px;
-            margin-top: 7px;
-            color: white;
-            background-color: #af272773;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: color 0.3s, background-color 0.3s
-        }
-        .upload-button:hover {
-            background-color: #af2727;
-            color: white    ;
-        }
-        .user-img{
-            width: 125px;
-            height: 130px;
-            border-radius: 50%;
-            margin: 10% 23%;
+.user-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+.dashboard {
+    color: white;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.sidebar a {
+    color: rgba(255, 255, 255, 0.705);
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #af272773;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar a:hover {
+    background-color: #af2727;
+    color: white;
+}
+.sidebar .dashboard {
+    color: #af2727;
+    font-weight: bold;
+}
+.table-container {
+    margin-top: 20px;
+    /* width: 100%; */
+    /* height: 1000px; */
+    overflow: auto;
+}
+.table thead th {
+    background-color: #4a4f63;
+    border-color: #fff;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+}
+.table tbody td {
+    background-color: #3b3f51;
+    border-color: #4a4f63;
+    text-align: center;
+}
+.bold-label {
+    font-weight: bold;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+}
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    background-color: #af272773;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s
+}
+.logout-button:hover {
+    background-color: red;
+    color: white;
+}
+.upload-button {
+    margin-left: 10px;
+    margin-top: 7px;
+    color: white;
+    background-color: #af272773;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s
+}
+    .upload-button:hover {
+        background-color: #af2727;
+        color: white    ;
+    }
+    .user-img{
+        width: 125px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 10% 23%;
         }
         #photo{
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
         }
         #file{
-            display: none;
+        display: none;
         }
         #upload-button {
             position: absolute;

@@ -12,7 +12,6 @@ body {
     background-color: rgba(44, 47, 62, 0.4);
     height: 100vh;
     padding: 20px;
-    border-radius: 8px;
 }
 .sidebar { 
     position: fixed;

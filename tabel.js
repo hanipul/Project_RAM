@@ -1,6 +1,5 @@
 (function () {
-    var DELIMITER = /[,;]/;
-    var NEWLINE = '\n';
+    var DELIMITER = /[;]/; 
     var qRegex = /^"|"$/g;
     var i = document.getElementById('file-upload');
     var table = document.getElementById('table');
@@ -104,13 +103,4 @@
             }
         });
     }
-
-    const resetButton = document.getElementById('reset-button');
-    resetButton.addEventListener('click',resetTable);
-    function resetTable() {
-        var rows = table.querySelectorAll('tr:not(:first-child)');
-        rows.forEach(function (row) {
-        row.style.display = '';
-        });
-    } 
 })();

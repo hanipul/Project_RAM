@@ -12,9 +12,9 @@
             <div class="signup">
                 <form>
                     <label for="chk" aria-hidden="true">Create User</label>
-                    <input type="text" name="nik" placeholder="NIK" required>
+                    <input type="tel" name="nik" id="nik" placeholder="NIK" pattern="[0-9]*" maxlength="16" required>
                     <input type="text" name="nama" placeholder="NAMA" required>
-                    <input type="text" name="nomor" placeholder="NOMOR TELEFON" required>
+                    <input type="tel" name="nomor" placeholder="NOMOR TELEFON" pattern="0-9" maxlength="13" required>
                     <input type="email" name="email" placeholder="EMAIL" required>
                     <input type="text" name="telegram" placeholder="ID TELEGRAM" required>
                     <div class="row">

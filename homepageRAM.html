@@ -12,8 +12,9 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <nav class="col-md-2 sidebar">
+        <div class="offcanvas-wrapper">
+            <button id="sidebarToggle" class="btn btn-primary">☰</button> 
+            <nav class="col-md-2 offcanvas-sidebar">
                 <div class="user-img">
                     <img src="gg.png.png" id="photo">
                     <input type="file" id="file">
@@ -52,7 +53,7 @@
                         <label for="file-upload" class="upload-button">
                             <i class="fas fa-upload"></i> Upload File
                         </label>
-                        <input type="file" id="file-upload" style="display: none;">
+                        <input type="file" id="file-upload" accept=".csv" style="display: none;">
                         <button class="reset-button" id="reset-button"><i class=" fas fa-undo"></i></button>
                     </div>
                 </div>

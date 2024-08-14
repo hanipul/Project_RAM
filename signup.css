@@ -13,12 +13,12 @@ body {
     
 }
 
-.login, .signup {
+.signup {
     width: 100%;
     max-width: 400px;
     backdrop-filter: blur(55px);
     padding: 60px;
-    border-radius: 50px;
+    border-radius: 60px;
     background-color: shadow(0, 0, 0, 0.);
     
 }
@@ -27,13 +27,12 @@ label {
     color: #af2727;
     font-size: 2.3em;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-weight: bold;
     transition: .5s ease-in-out;
 }
 
-.login input[type="email"], .login input[type="password"], .login select, .login input[type="text"],
-.signup input[type="text"], .signup input[type="email"], .signup input[type="text"], .signup select {
+form input[type="tel"],form input[type="email"],form input[type="password"],form input[type="text"],form select {
     width: 90%;
     padding: 12px;
     margin: 10px ;
@@ -42,9 +41,10 @@ label {
     outline: none;
     background: #e0dede;
     font-size: 1rem;
-    text-transform: uppercase ;
+    text-transform:none ;
 
 }
+
 
 .row {
     display: flex;

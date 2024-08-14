@@ -20,3 +20,7 @@ $(function() {
         dateFormat: "yy-mm-dd"
     });
 });
+
+document.getElementById('sidebarToggle').addEventListener('click', function () {
+    document.querySelector('.offcanvas-wrapper').classList.toggle('open');
+});

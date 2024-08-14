@@ -1,5 +1,6 @@
 (function () {
-    var DELIMITER = /[;]/; 
+    var DELIMITER = /[,;]/;
+    var NEWLINE = '\n';
     var qRegex = /^"|"$/g;
     var i = document.getElementById('file-upload');
     var table = document.getElementById('table');

@@ -10,6 +10,8 @@
         return;
     }
 
+    loadSavedData();
+
     i.addEventListener('change', function () {
         if (!!i.files && i.files.length > 0) {
             parseCSV(i.files[0]);
@@ -28,7 +30,9 @@
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            toTable(e.target.result);
+            var csvContent = e.target.result;
+            saveToLocalStorage(csvContent);
+            toTable(csvContent);
         };
 
         reader.readAsText(file);
@@ -113,5 +117,16 @@
         row.style.display = '';
         });
     } 
+
+    function saveToLocalStorage(data){
+        localStorage.setItem('uploadedCSV', data);
+    }
+
+    function loadSavedData(){
+        var savedData = localStorage.getItem('uploadedCSV');
+        if(savedData){
+            toTable(savedData);
+        }
+    }
 
 })();

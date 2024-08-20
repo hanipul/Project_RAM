@@ -9,7 +9,25 @@
             <input type="tel" name="nomor" placeholder="NOMOR TELEFON" pattern="[0-9]*" maxlength="12">
             <input type="email" name="email" placeholder="EMAIL" required>
             <input type="text" name="telegram" placeholder="ID TELEGRAM" required>
-			<button>Sign Up</button>
+            <div class="row">
+                <select name="unit" required>
+                    <option value="" disabled selected>UNIT</option>
+                    <option value="unit1">ASO</option>
+                    <option value="unit2">INPUTER TA</option>
+                    <option value="unit3">DAMAN</option>
+                    <option value="unit4">RAM</option>
+                    <option value="unit5">TA Regional</option>
+                </select>
+                <select name="witel" required>
+                    <option value="" disabled selected>WITEL</option>
+                    <option value="witel1">BANDUNG TIMUR</option>
+                    <option value="witel2">BANDUNG BARAT</option>
+                    <option value="witel3">SUKABUMI</option>
+                    <option value="witel4">CIREBON</option>
+                    <option value="witel5">KARAWANG</option>
+                </select>
+            </div>
+			<button>Create</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -18,20 +36,20 @@
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
             <input type="password" placeholder="Repeat Password" />
-			<button>Sign In</button>
+			<button>Create</button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Selamat Datang!</h1>
-				<p>Untuk tetap terhubung dengan kami, silakan login dengan informasi pribadi Anda</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<h1>Account</h1>
+				<p>Untuk tetap terhubung dengan kami, masukkan informasi pribadi yang sesuai</p>
+				<button class="ghost" id="signIn">Create User</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Halo!</h1>
+				<h1>User</h1>
 				<p>Masukkan akun pribadi Anda dan mulailah perjalanan bersama kami</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<button class="ghost" id="signUp">Create Account</button>
 			</div>
 		</div>
 	</div>

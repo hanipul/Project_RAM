@@ -20,6 +20,7 @@
                     <input type="password" name="pswd" placeholder="Password">
                     <select id="unit" name="unit" required>
                         <option value="" disabled selected>Pilih Unit</option>
+                        <option value="admin">ADMIN</option>
                         <option value="aso">ASO</option>
                         <option value="inputer_ta">INPUTER TA</option>
                         <option value="daman">DAMAN</option>
@@ -29,7 +30,6 @@
                     <input type="text" name="captcha" placeholder="Masukkan Captcha">
                     <img src="path-to-captcha-image" alt="Captcha">
                     <button type="submit">Login</button>
-                    <p>Belum punya akun? <a href="signup.html">Buat akun</a></p>
                 </form>
             </div>
         </div>
@@ -38,7 +38,9 @@
     <script>
         function loginRedirect() {
             const unit = document.getElementById('unit').value;
-            if (unit === 'aso') {
+            if (unit === 'admin') {
+                window.location.href = 'signup.html';
+            } else if (unit === 'aso') {
                 window.location.href = 'homepageASO.html';
             } else if (unit === 'inputer_ta') {
                 window.location.href = 'homepageINPUTER.html';

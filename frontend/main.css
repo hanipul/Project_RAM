@@ -32,8 +32,8 @@ margin: 0;
   padding: 80px;
   background: none;
   cursor: pointer;
-  width: 500px; /* Sesuaikan dengan ukuran gambar Anda */
-  height: 500px; /* Sesuaikan dengan ukuran gambar Anda */
+  width: 600px; /* Sesuaikan dengan ukuran gambar Anda */
+  height: 550px; /* Sesuaikan dengan ukuran gambar Anda */
   background-image: url('logo.png');
   background-size: 100%;
   background-position: center;

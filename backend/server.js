@@ -21,12 +21,27 @@ db.connect((err) => {
     console.log('Connected to database');
 });
 
-// Signup form routing
-app.post('/signup', (req, res) => {
+// Create Account Routing
+app.post('/createaccount', (req, res) => {
     const { nik, nama, nomor, email, telegram, unit, witel } = req.body;
 
-    const sql = 'INSERT INTO users (nik, nama, nomor, email, telegram, unit, witel) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO accounts (nik, nama, nomor, email, telegram, unit, witel) VALUES (?, ?, ?, ?, ?, ?, ?)';
     db.query(sql, [nik, nama, nomor, email, telegram, unit, witel], (err, result) => {
+        if (err) {
+            console.error('Error executing query:', err);
+            res.status(500).send('Server error, please try again later.');
+            return;
+        }
+        res.redirect('/login.html');
+    });
+});
+
+// Create User Routing
+app.post('/createuser', (req, res) => {
+    const { email, password } = req.body;
+
+    const sql = 'INSERT INTO users (email, password) VALUES (?, ?)';
+    db.query(sql, [email, password], (err, result) => {
         if (err) {
             console.error('Error executing query:', err);
             res.status(500).send('Server error, please try again later.');

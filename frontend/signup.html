@@ -1,45 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="main">
-            <div class="signup">
-                <form action="/signup" method="POST">
-                    <label for="chk" aria-hidden="true">Create User</label>
-                    <input type="tel" name="nik" id="nik" placeholder="NIK" pattern="[0-9]*" maxlength="16" required>
-                    <input type="text" name="nama" placeholder="NAMA" required>
-                    <input type="tel" name="nomor" placeholder="NOMOR TELEFON" pattern="[0-9]*" maxlength="12">
-                    <input type="email" name="email" placeholder="EMAIL" required>
-                    <input type="text" name="telegram" placeholder="ID TELEGRAM" required>
-                    <div class="row">
-                        <select name="unit" required>
-                            <option value="" disabled selected>Select unit</option>
-                            <option value="unit1">ASO</option>
-                            <option value="unit2">INPUTER TA</option>
-                            <option value="unit3">DAMAN</option>
-                            <option value="unit4">RAM</option>
-                            <option value="unit5">TA Regional</option>
-                        </select>
-                        <select name="witel" required>
-                            <option value="" disabled selected>Select witel</option>
-                            <option value="witel1">BANDUNG TIMUR</option>
-                            <option value="witel2">BANDUNG BARAT</option>
-                            <option value="witel3">SUKABUMI</option>
-                            <option value="witel4">CIREBON</option>
-                            <option value="witel5">KARAWANG</option>
-                        </select>
-                    </div>
-                    <button type="submit">Create</button>
-                    <p>Already have an account? <a href="login.html">Login</a></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="signup.css">
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="tel" name="nik" id="nik" placeholder="NIK" pattern="[0-9]*" maxlength="16" required>
+            <input type="text" name="nama" placeholder="NAMA" required>
+            <input type="tel" name="nomor" placeholder="NOMOR TELEFON" pattern="[0-9]*" maxlength="12">
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <input type="text" name="telegram" placeholder="ID TELEGRAM" required>
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Create User</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+            <input type="password" placeholder="Repeat Password" />
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Selamat Datang!</h1>
+				<p>Untuk tetap terhubung dengan kami, silakan login dengan informasi pribadi Anda</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Halo!</h1>
+				<p>Masukkan akun pribadi Anda dan mulailah perjalanan bersama kami</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="signup.js"></script>

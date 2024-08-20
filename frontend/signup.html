@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +43,62 @@
                     <button type="submit">Create</button>
                     <p>Already have an account? <a href="login.html">Login</a></p>
                 </form>
+=======
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="signup.css">
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="tel" name="nik" id="nik" placeholder="NIK" pattern="[0-9]*" maxlength="16" required>
+            <input type="text" name="nama" placeholder="NAMA" required>
+            <input type="tel" name="nomor" placeholder="NOMOR TELEFON" pattern="[0-9]*" maxlength="12">
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <input type="text" name="telegram" placeholder="ID TELEGRAM" required>
+            <div class="row">
+                <select name="unit" required>
+                    <option value="" disabled selected>UNIT</option>
+                    <option value="unit1">ASO</option>
+                    <option value="unit2">INPUTER TA</option>
+                    <option value="unit3">DAMAN</option>
+                    <option value="unit4">RAM</option>
+                    <option value="unit5">TA Regional</option>
+                </select>
+                <select name="witel" required>
+                    <option value="" disabled selected>WITEL</option>
+                    <option value="witel1">BANDUNG TIMUR</option>
+                    <option value="witel2">BANDUNG BARAT</option>
+                    <option value="witel3">SUKABUMI</option>
+                    <option value="witel4">CIREBON</option>
+                    <option value="witel5">KARAWANG</option>
+                </select>
+>>>>>>> da00dc50ade9ea9a5349f2e12965b1d63841db7e
             </div>
-        </div>
-    </div>
-</body>
-</html>
+			<button>Create</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Create User</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+            <input type="password" placeholder="Repeat Password" />
+			<button>Create</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Account</h1>
+				<p>Untuk tetap terhubung dengan kami, masukkan informasi pribadi yang sesuai</p>
+				<button class="ghost" id="signIn">Create User</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>User</h1>
+				<p>Masukkan akun pribadi Anda dan mulailah perjalanan bersama kami</p>
+				<button class="ghost" id="signUp">Create Account</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="signup.js"></script>

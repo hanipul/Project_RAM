@@ -2,10 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
+const bcrypt = require('bcrypt');  // Import bcrypt for password hashing
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Connect to database
@@ -21,7 +22,7 @@ db.connect((err) => {
     console.log('Connected to database');
 });
 
-// Create Account Routing
+// Signup for Create Account
 app.post('/createaccount', (req, res) => {
     const { nik, nama, nomor, email, telegram, unit, witel } = req.body;
 
@@ -36,19 +37,25 @@ app.post('/createaccount', (req, res) => {
     });
 });
 
-// Create User Routing
-app.post('/createuser', (req, res) => {
+// Signup for Create User
+app.post('/createuser', async (req, res) => {
     const { email, password } = req.body;
 
-    const sql = 'INSERT INTO users (email, password) VALUES (?, ?)';
-    db.query(sql, [email, password], (err, result) => {
-        if (err) {
-            console.error('Error executing query:', err);
-            res.status(500).send('Server error, please try again later.');
-            return;
-        }
-        res.redirect('/login.html');
-    });
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);  // Hash the password
+        const sql = 'INSERT INTO users (email, password) VALUES (?, ?)';
+        db.query(sql, [email, hashedPassword], (err, result) => {
+            if (err) {
+                console.error('Error executing query:', err);
+                res.status(500).send('Server error, please try again later.');
+                return;
+            }
+            res.redirect('/login.html');
+        });
+    } catch (err) {
+        console.error('Error hashing password:', err);
+        res.status(500).send('Server error, please try again later.');
+    }
 });
 
 // Run the server

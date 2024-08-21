@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
-const bcrypt = require('bcrypt');  // Import bcrypt for password hashing
+const bcrypt = require('bcrypt');
 
 const app = express();
 

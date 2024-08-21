@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
-    background-image: url(bgLogin.jpg);
+    background-image: url(../assets/bgLogin.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,7 +31,7 @@ body {
     justify-content: center;
     align-items: center;;
     color: white;
-    background-image: url(logo.png);
+    background-image: url(../assets/logo.png);
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;

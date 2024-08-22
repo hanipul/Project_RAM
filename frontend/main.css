@@ -14,7 +14,7 @@
   
 }
 body {
-background-image: url(bgLogin.jpg);
+background-image: url(../frontend/assets/bgLogin.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;

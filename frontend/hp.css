@@ -1,9 +1,5 @@
 body {
-<<<<<<< Updated upstream
-    background-image: url('../assets/bgLogin.jpg');
-=======
-    background-image: url('assets/bgLogin.jpg');
->>>>>>> Stashed changes
+    background-image: url('../frontend/assets/bgLogin.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

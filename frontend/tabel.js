@@ -129,4 +129,10 @@
         }
     }
 
+    const logoutButton = document.getElementById('logout-button');
+    logoutButton.addEventListener('click', function(){
+        localStorage.removeItem('uploadedCSV');
+        window.location.href = 'login.html';
+    })
+
 })();

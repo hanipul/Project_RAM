@@ -6,7 +6,11 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
+<<<<<<< Updated upstream
     background-image: url(../assets/bgLogin.jpg);
+=======
+    background-image: url(assets/bgLogin.jpg);
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,7 +35,11 @@ body {
     justify-content: center;
     align-items: center;;
     color: white;
+<<<<<<< Updated upstream
     background-image: url(../assets/logo.png);
+=======
+    background-image: url(assets/logo.png);
+>>>>>>> Stashed changes
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;

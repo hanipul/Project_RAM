@@ -15,7 +15,11 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	/* margin: -20px 0 50px; */
+<<<<<<< Updated upstream
     background-image: url(../assets/bgLogin.jpg);
+=======
+    background-image: url(assets/bgLogin.jpg);
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -28,10 +32,11 @@ h1 {
 
 h2 {
 	text-align: center;
+
 }
 
 p {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;

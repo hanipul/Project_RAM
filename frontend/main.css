@@ -34,7 +34,7 @@ margin: 0;
   cursor: pointer;
   width: 600px; /* Sesuaikan dengan ukuran gambar Anda */
   height: 550px; /* Sesuaikan dengan ukuran gambar Anda */
-  background-image: url('logo.png');
+  background-image: url('../frontend/assets/logo.png');
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;

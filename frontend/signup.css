@@ -14,7 +14,16 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
+<<<<<<< Updated upstream
     background-image: url(../frontend/assets/bgLogin.jpg);
+=======
+	/* margin: -20px 0 50px; */
+<<<<<<< Updated upstream
+    background-image: url(bgLogin.jpg);
+=======
+    background-image: url(bgLogin.jpg);
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

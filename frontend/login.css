@@ -31,7 +31,11 @@ body {
     justify-content: center;
     align-items: center;;
     color: white;
-    background-image: url(../frontend/assets/logo.png);
+
+    background-image: url(logo.png);
+    background-image: url(logo.png);
+
+    background-image: url(logo.png);
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;

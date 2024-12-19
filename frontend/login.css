@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
-    background-image: url(../frontend/assets/bgLogin.jpg);
+    background-image: url(../frontend/bgLogin.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
